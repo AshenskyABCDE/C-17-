@@ -23,13 +23,13 @@ void testTryCatch(){
 void out_of_range_Exception(){
     try{
         throw std::out_of_range("");
-    } catch (std::out_of_range& e){
-        std::cout << 1;
     } catch (std::exception& e){
+        std::cout << 1;
+    } catch (std::out_of_range& e){
         std::cout << 2;
     }
     //输出1
-
+    //抛出out_of_range异常，
 }
 int main(){
     out_of_range_Exception();

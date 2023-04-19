@@ -40,9 +40,6 @@ int main(){
 
    std::set<std::pair<std::string,int>> set1;
    std::pair<std::string,int> itemsToAdd[5]{{"hello",1},{"world",1},{"world",2},{"hello",1},{"world",2}};
-   if(set1.insert({"hello",1})){
-    std::cout<<"test"<<std::endl;
-   }
    for(auto &p : itemsToAdd){
     if (const auto [iter , inserted] = set1.insert(p);inserted){//set1.insert返回的是pair<iterator,bool>
         std::cout<<iter->first<<"--- "<<iter->second<<'\n';
